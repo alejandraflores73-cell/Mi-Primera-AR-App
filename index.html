@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, user-scalable=no, minimumscale=1.0, maximum-scale=1.0">
- <title>Mi Primera App AR – Análisis de Tecnologías Emergentes</title>
+    <meta charset="utf-8">
+    <title>Mi Primera App AR</title>
 
- <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-
- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframear.js"></script>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
-<body style="margin: 0px; overflow: hidden;">
 
- <a-scene>
+<body style="margin:0; overflow:hidden;">
 
- <a-marker preset="hiro">
+<a-scene embedded arjs>
 
- <a-box
- position="0 0.5 0"
- color="#4CC3D9"
- material="opacity: 0.8"
- animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
- </a-box>
- </a-marker>
+    <a-marker preset="hiro">
 
- <a-entity camera></a-entity>
+        <a-box
+            position="0 0.5 0"
+            color="red"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+        </a-box>
 
- </a-scene>
+    </a-marker>
+
+    <a-entity camera></a-entity>
+
+</a-scene>
 
 </body>
 </html>
